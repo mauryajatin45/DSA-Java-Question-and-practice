@@ -19,13 +19,13 @@ public class butterfly_pattern {
         }
 
         // FOR DOWNWARD PART
-        for (int i = 1; i >= n; i--) {
+        for (int i = n; i >= 1; i--) {
             for (int star = 1; star <= i; star++) {
                 System.out.print("*");
             }
 
             int space = (2) * (n - i);
-            for (; space > 0; space++) {
+            for (; space > 0; space--) {
                 System.out.print(" ");
             }
 
