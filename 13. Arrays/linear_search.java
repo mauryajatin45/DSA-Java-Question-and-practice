@@ -5,10 +5,10 @@ public class linear_search {
             if (even[i] == key) {
                 return even[i];
             }else{
-                return -1;
+                
             }
         }
-        
+        return -1;
     }
 
     public static void main(String args[]) {
