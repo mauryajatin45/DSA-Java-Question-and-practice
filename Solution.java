@@ -1,16 +1,19 @@
 public class Solution {
-    public static int maxProfit(int prices[]) {
-        int maxvalue = Integer.MIN_VALUE;
-        int purchaseprice=prices[1];
-        for(int i=1; i<prices.length; i++){
-            
+    public static int maxProduct(int nums[]) {
+        int maxmul = Integer.MIN_VALUE;
+        for(int i = 0; i<nums.length; i++){
+            for(int j = i + 1; j<nums.length; j++){
+                int product = nums[i] * nums[j];
+                if(product>maxmul){
+                    maxmul = product;
+                }
+            }
         }
-
-        return 0;
+        return maxmul;
     }
 
     public static void main(String[] args) {
-        int prices[] = { 7, 1, 5, 3, 6, 4 };
-        System.out.println(maxProfit(prices));
+        int nums[] = { 2, 3, -2, 4 };
+        System.out.println(maxProduct(nums));
     }
 }
