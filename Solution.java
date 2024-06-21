@@ -1,19 +1,17 @@
 public class Solution {
-    public static int maxProduct(int nums[]) {
-        int maxmul = Integer.MIN_VALUE;
-        for(int i = 0; i<nums.length; i++){
-            for(int j = i + 1; j<nums.length; j++){
-                int product = nums[i] * nums[j];
-                if(product>maxmul){
-                    maxmul = product;
+    public static int findDuplicate(int nums[]) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[j] == nums[i]) {
+                    return nums[j];
                 }
             }
         }
-        return maxmul;
+        return 0;
     }
 
     public static void main(String[] args) {
-        int nums[] = { 2, 3, -2, 4 };
-        System.out.println(maxProduct(nums));
+        int nums[] = { 3, 1, 3, 4, 2 };
+        System.out.println(findDuplicate(nums));
     }
 }
