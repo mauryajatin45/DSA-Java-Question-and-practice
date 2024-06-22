@@ -16,10 +16,16 @@ public class sprial_matrix {
             }
             // bottom
             for (int j = EndCol - 1; j >= StartCol; j--) {
+                if (StarRow == EndRow) {
+                    break;
+                }
                 System.out.print(arr[EndRow][j] + " ");
             }
             // left
-            for (int i = EndRow - 1; i >= StarRow; i--) {
+            for (int i = EndRow - 1; i >= StarRow+1; i--) {
+                if (StartCol == EndCol) {
+                    break;
+                }
                 System.out.print(arr[i][StartCol] + " ");
             }
 
