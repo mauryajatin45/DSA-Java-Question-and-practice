@@ -10,7 +10,6 @@ public class compare {
             }
             System.out.println(largest);
 
-
     }
 
     public static void main(String[] args) {
