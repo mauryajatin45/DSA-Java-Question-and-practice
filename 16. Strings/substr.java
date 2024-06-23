@@ -1,0 +1,7 @@
+public class substr {
+    public static void main(String[] args) {
+        String str = "Jatin";
+
+        System.out.println(str.substring(0, 5));
+    }
+}
