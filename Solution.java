@@ -1,22 +1,21 @@
 import java.util.Arrays;
 import java.util.stream.IntStream;
+import java.util.*;
 
 public class Solution {
-    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        int arr[] = mergeArraysUsingStreams(nums1, nums2);
-        Arrays.sort(arr);
-        int add = 0;
-        for (int i; i < arr.length; i++) {
-            add += arr[i];
+    public static long reverse(long x) {
+        long number = 0;
+        while (x != 0) {
+            long last = x % 10;
+            number =number * 10 + last;
+            x /= 10;
         }
-        double op;
-        return op = add / arr.length;
-
+        return number;
     }
 
     public static void main(String[] args) {
-        int nums1[] = { 1, 3 };
-        int nums2[] = { 2, 4 };
-        System.out.println(findMedianSortedArrays(nums1, nums2));
+        long x = 1534236469;
+        reverse(x);
+        System.out.println(reverse(x));
     }
 }

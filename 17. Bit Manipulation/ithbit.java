@@ -19,7 +19,15 @@ public class ithbit {
         return n & bitmask;
     }
 
+    public static int updateithvalue(int n, int i, int newbit) {
+        if (newbit == 0) {
+            return clearithvalue(n, i);
+        } else {
+            return setithvalue(n, i);
+        }
+    }
+
     public static void main(String[] args) {
-        System.out.println(clearithvalue(10, 1));
+        System.out.println(updateithvalue(10, 1, 0));
     }
 }
