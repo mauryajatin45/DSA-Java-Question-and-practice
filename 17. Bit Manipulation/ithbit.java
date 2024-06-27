@@ -27,7 +27,12 @@ public class ithbit {
         }
     }
 
+    public static int cleartillithvalue(int n, int i) {
+        int bitmask = ~(0)<< i;
+        return n & bitmask;
+    }
+
     public static void main(String[] args) {
-        System.out.println(updateithvalue(10, 1, 0));
+        System.out.println(cleartillithvalue(15, 2));
     }
 }

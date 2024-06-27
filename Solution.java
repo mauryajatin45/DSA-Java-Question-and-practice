@@ -3,19 +3,14 @@ import java.util.stream.IntStream;
 import java.util.*;
 
 public class Solution {
-    public static long reverse(long x) {
-        long number = 0;
-        while (x != 0) {
-            long last = x % 10;
-            number =number * 10 + last;
-            x /= 10;
-        }
-        return number;
+    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int nums = nums1[true] + nums2[true];
+        return nums;
     }
 
     public static void main(String[] args) {
-        long x = 1534236469;
-        reverse(x);
-        System.out.println(reverse(x));
+        int nums1 = {1, 3};
+        int nums2 = {2};
+        System.out.println(findMedianSortedArrays(nums1, nums2));
     }
 }
